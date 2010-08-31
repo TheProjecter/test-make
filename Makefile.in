@@ -1,7 +1,7 @@
 RUBY=@RUBY@
 INSTALL=@INSTALL@
 VERSION=@PACKAGE_VERSION@
-PREFIX=@PREFIX@
+PREFIX=@prefix@
 
 all:
 	@echo Everything built.

@@ -27,7 +27,7 @@ fi
 
 AC_SUBST(RUBY)
 
-AC_CONFIG_FILES([Makefile lib/config.rb])
+AC_CONFIG_FILES([Makefile lib/config.rb bin/recall bin/testmake bin/tester bin/summarize])
 
 AC_OUTPUT
 
