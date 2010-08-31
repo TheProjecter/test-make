@@ -302,6 +302,9 @@ File.open($file) {
           break
         end
       }
+      if ($targs[tt.name] != nil)
+      	  raise "Error : A target with the name \"%s\" is already defined." % [tt.name]
+      end
       $targs[tt.name]=tt
       $targOrder << tt
     else
