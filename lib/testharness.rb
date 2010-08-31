@@ -1,17 +1,9 @@
 require 'pathname'
 require 'getoptlong'
 
-meUnresolved=Pathname.new($0)
-me=meUnresolved.realpath
-bindir=me.dirname.realpath
-$homedir=bindir.parent
-$libdir=$homedir+"lib"
-
-$dollarZero=$0
-
-require ($libdir+"config.rb")
-require ($libdir+"fijiconfig.rb")
-require ($libdir+"testlib.rb")
+require 'config'
+require 'fijiconfig'
+require 'testlib'
 
 opts=GetoptLong.new([ '--output', GetoptLong::REQUIRED_ARGUMENT ],
                     [ '--only', GetoptLong::REQUIRED_ARGUMENT ],
