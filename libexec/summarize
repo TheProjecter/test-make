@@ -12,7 +12,7 @@ $libdir=$homedir+"lib"
 $dollarZero=$0
 
 require ($libdir+"fijiconfig.rb")
-require ($homedir+"localbin"+"testlib.rb")
+require ($libdir+"testlib.rb")
 
 opts=GetoptLong.new([ '--help', GetoptLong::NO_ARGUMENT ],
                     [ '--all', GetoptLong::NO_ARGUMENT ],

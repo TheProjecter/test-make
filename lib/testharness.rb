@@ -11,7 +11,7 @@ $dollarZero=$0
 
 require ($libdir+"config.rb")
 require ($libdir+"fijiconfig.rb")
-require ($homedir+"localbin"+"testlib.rb")
+require ($libdir+"testlib.rb")
 
 opts=GetoptLong.new([ '--output', GetoptLong::REQUIRED_ARGUMENT ],
                     [ '--only', GetoptLong::REQUIRED_ARGUMENT ],

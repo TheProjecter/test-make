@@ -1,3 +1,38 @@
+RUBY=@RUBY@
+INSTALL=@INSTALL@
+VERSION=@PACKAGE_VERSION@
+PREFIX=@PREFIX@
+
 all:
 	@echo Everything built.
 
+DISTNAME=testmake-$(VERSION)
+dist:
+	rm -rf $(DISTNAME)
+	mkdir $(DISTNAME)
+	cp configure configure.ac install-sh README LICENSE Makefile.in $(DISTNAME)
+	mkdir $(DISTNAME)/bin
+	mkdir $(DISTNAME)/lib
+	cp bin/recall.in $(DISTNAME)/bin
+	cp bin/summarize.in $(DISTNAME)/bin
+	cp bin/tester.in $(DISTNAME)/bin
+	cp bin/testmake.in $(DISTNAME)/bin
+	cp libexec/recall $(DISTNAME)/bin
+	cp libexec/summarize $(DISTNAME)/bin
+	cp libexec/tester $(DISTNAME)/bin
+	cp libexec/testmake $(DISTNAME)/bin
+	cp lib/testlib.rb $(DISTNAME)/bin
+	cp lib/testharness.rb $(DISTNAME)/bin
+	cp lib/fijiconfig.rb $(DISTNAME)/bin
+	cp lib/config.rb.in $(DISTNAME)/bin
+	tar -czf $(DISTNAME).tar.gz $(DISTNAME)
+	rm -rf $(DISTNAME)
+
+baredist: dist
+	tar -xvf $(DISTNAME).tar.gz
+	mv $(DISTNAME) testmake
+	tar -czf testmake.tar.gz testmake
+
+install: all
+	mkdir -p $(PREFIX)/bin
+	mkdir -p $(PREFIX)/share/
