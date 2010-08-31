@@ -31,3 +31,4 @@ AC_CONFIG_FILES([Makefile lib/config.rb bin/recall bin/testmake bin/tester bin/s
 
 AC_OUTPUT
 
+chmod 755 bin/recall bin/testmake bin/tester bin/summarize
