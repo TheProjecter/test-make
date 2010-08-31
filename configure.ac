@@ -27,8 +27,8 @@ fi
 
 AC_SUBST(RUBY)
 
-AC_CONFIG_FILES([Makefile lib/config.rb bin/recall bin/testmake bin/tester bin/summarize])
+AC_CONFIG_FILES([Makefile lib/config.rb bin/recall bin/testmake bin/tester bin/summarize bin/inst-recall bin/inst-testmake bin/inst-tester bin/inst-summarize])
 
 AC_OUTPUT
 
-chmod 755 bin/recall bin/testmake bin/tester bin/summarize
+chmod 755 bin/recall bin/testmake bin/tester bin/summarize bin/inst-recall bin/inst-testmake bin/inst-tester bin/inst-summarize
